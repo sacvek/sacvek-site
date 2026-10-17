@@ -25,7 +25,11 @@ body {
   color: var(--text);
   font-family: Inter, Arial, sans-serif;
   background:
-    radial-gradient(ellipse at 50% 0%, #321642 0%, transparent 55%),
+    linear-gradient(
+      rgba(16, 12, 21, 0.35),
+      rgba(16, 12, 21, 0.55)
+    ),
+    url("images/images (3).jpg") center / cover fixed no-repeat,
     var(--bg);
 }
 
@@ -406,4 +410,4 @@ footer {
     font-weight: 800;
     color: #e9b5ff;
   }
-  
+}
