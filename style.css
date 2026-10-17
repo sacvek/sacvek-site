@@ -1,0 +1,409 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #100c15;
+  --panel: #1b1422;
+  --purple: #bd43f4;
+  --pink: #e27bff;
+  --text: #fbf5ff;
+  --muted: #b7a8c4;
+  --border: rgba(231, 180, 255, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: Inter, Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at 50% 0%, #321642 0%, transparent 55%),
+    var(--bg);
+}
+
+.topbar {
+  min-height: 76px;
+  padding: 15px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: rgba(12, 9, 18, 0.9);
+  border-bottom: 1px solid #ffffff0c;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 26px 'Russo One', sans-serif;
+  letter-spacing: 1px;
+}
+
+.brand-mark {
+  color: var(--pink);
+  font-size: 34px;
+}
+
+.top-label {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+  color: var(--pink);
+  font-size: 22px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 13px 4%;
+  background: #0b0810;
+  border-bottom: 1px solid #ffffff0b;
+}
+
+.tab {
+  padding: 10px 17px;
+  border: 1px solid #d76aff35;
+  border-radius: 10px;
+  background: #21152b;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tab.active {
+  background: var(--purple);
+}
+
+.container {
+  width: min(100% - 32px, 800px);
+  margin: 25px auto;
+}
+
+.hero {
+  padding: 26px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #211729, #130f19);
+  box-shadow: 0 18px 50px #0004;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.game-logo {
+  font: italic 17px 'Russo One', sans-serif;
+  line-height: 0.95;
+  text-align: left;
+}
+
+.date {
+  color: #e5b3ff;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.eyebrow {
+  margin: 22px 0 12px;
+  color: #d9a1f4;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin: 15px 0;
+  font: clamp(40px, 8vw, 68px)/0.95 'Russo One', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 0 5px 25px #a928df40;
+}
+
+.hero h1 span {
+  color: #e9d6ff;
+}
+
+.hero-divider {
+  display: grid;
+  place-items: center;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+  background:
+    radial-gradient(circle, #78379a 1.5px, transparent 2px),
+    linear-gradient(100deg, #b54ee1, #e59aff, #b94ae4);
+  background-size: 14px 14px, auto;
+}
+
+.hero-description {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin: 17px 0;
+}
+
+.search,
+.add-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #1c1424;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.search {
+  flex: 1;
+}
+
+.search span:first-child {
+  color: var(--pink);
+  font-size: 22px;
+}
+
+.add-button {
+  color: white;
+  background: #281632;
+}
+
+.tier {
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid #dc8aff25;
+  border-radius: 15px;
+  background: #1b1223;
+}
+
+.tier-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font: 14px 'Russo One', sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 6px #54136b;
+  background:
+    radial-gradient(circle, #71348d 1.6px, transparent 2px),
+    linear-gradient(100deg, #bd63df, #e6a0ff, #b54cda);
+  background-size: 14px 14px, auto;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 9px;
+  padding: 12px;
+}
+
+.item {
+  min-width: 0;
+  padding: 10px 5px;
+  text-align: center;
+  border: 1px solid #ffffff0b;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #34213f, #211528);
+  animation: appear 0.4s both;
+}
+
+.item-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 7px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #603078, #2d1d3c);
+  font-size: 25px;
+}
+
+.item-name {
+  overflow-wrap: anywhere;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.item-meta {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 7px;
+  color: #58f52d;
+  font: 10px 'Russo One', sans-serif;
+}
+
+.item-meta span {
+  color: #e56aff;
+}
+
+.legend {
+  margin-top: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  background: linear-gradient(145deg, #613477, #281632 80%);
+}
+
+.legend h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  font: 20px 'Russo One', sans-serif;
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px 8px;
+}
+
+.legend-grid > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+}
+
+.fruit {
+  color: #56ff20;
+}
+
+.pass {
+  color: #ff4444;
+}
+
+.gear {
+  color: #57d7ff;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  flex: none;
+  border-radius: 50%;
+}
+
+.purple {
+  background: #c000ff;
+}
+
+.green {
+  background: #43f51c;
+}
+
+.yellow {
+  background: #ffe52d;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 24px 5px;
+  color: #9986a6;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 14px;
+  }
+
+  .brand {
+    font-size: 21px;
+  }
+
+  .top-label {
+    display: none;
+  }
+
+  .tabs {
+    padding: 10px 12px;
+  }
+
+  .tab {
+    padding: 9px 12px;
+  }
+
+  .container {
+    width: calc(100% - 22px);
+    margin-top: 14px;
+  }
+
+  .hero {
+    padding: 20px 14px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    padding: 8px;
+  }
+
+  .legend {
+    padding: 18px 13px;
+  }
+
+  .legend-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item-icon {
+    width: 100%;
+    min-height: 65px;
+    height: auto;
+    padding: 8px 2px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    overflow-wrap: anywhere;
+    font-size: 10px;
+    font-weight: 800;
+    color: #e9b5ff;
+  }
+  
